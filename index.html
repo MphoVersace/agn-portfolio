@@ -1,0 +1,729 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mpho Mtlomelo | President, Women in AI Global Networks</title>
+    <style>
+        /* Base Styling */
+        :root {
+            --primary-color: #1a202c; /* Deep Charcoal/Navy */
+            --secondary-color: #2c5282; /* Professional Blue */
+            --accent-color: #e53e3e; /* Bold Red/Pink for accents */
+            --text-color: #4a5568;
+            --light-bg: #f7fafc;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif; /* Using a professional font */
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        h1, h2, h3 {
+            color: var(--primary-color);
+            margin-top: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+
+        section {
+            padding: 4rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.25rem;
+            font-weight: 800;
+            margin-bottom: 2rem;
+            border-bottom: 3px solid var(--accent-color);
+            display: inline-block;
+            padding-bottom: 0.5rem;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background-color: var(--primary-color);
+            padding: 1rem 0;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            position: sticky; /* Add stickiness for better UX */
+            top: 0;
+            z-index: 100;
+        }
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 800;
+            text-decoration: none;
+        }
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            margin-left: 1.5rem;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: white;
+            text-align: center;
+            padding: 6rem 0;
+            border-bottom: 8px solid var(--accent-color);
+        }
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+        }
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+        .cta-group {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .cta-button:hover {
+            background-color: #c53030;
+            transform: translateY(-2px);
+        }
+        .summary-button {
+            background-color: var(--secondary-color);
+        }
+        .summary-button:hover {
+            background-color: #213c5c;
+        }
+
+        /* About Section */
+        .about .container {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            align-items: center;
+        }
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 0 0 5px var(--accent-color);
+            overflow: hidden; /* To contain the SVG */
+        }
+        .about-content {
+            max-width: 700px;
+            text-align: center;
+        }
+        
+        /* Project Section (Women in AI) */
+        .project {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        .project-card {
+            background-color: var(--secondary-color);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .project-card h2 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 2rem;
+            flex-wrap: wrap; /* Added for mobile responsiveness */
+            gap: 1rem;
+        }
+        .stat-item {
+            text-align: center;
+            flex-basis: 30%; /* Ensure items space out nicely */
+            min-width: 120px;
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--accent-color);
+        }
+        .stat-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #ccc;
+        }
+
+        /* Achievements Section */
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .achievement-item {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 5px solid var(--secondary-color);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .achievement-item h3 {
+            font-size: 1.25rem;
+            color: var(--accent-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        /* Future Vision & Roadmap Section */
+        .vision-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .roadmap-item {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-bottom: 5px solid var(--accent-color); /* Highlight future focus */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .roadmap-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+        }
+        .roadmap-item h3 {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        .roadmap-item strong {
+            color: var(--secondary-color);
+            font-weight: 700;
+        }
+
+
+        /* Leadership Section */
+        .leadership-philosophy {
+            background-color: white;
+            padding: 3rem;
+            border-radius: 12px;
+            border: 1px solid #ddd;
+            text-align: center;
+            max-width: 800px;
+            margin: 2rem auto 0 auto;
+        }
+        .leadership-philosophy h2 {
+            color: var(--secondary-color);
+        }
+
+
+        /* Expertise/Skills Section */
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .skill-item {
+            background-color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            border-top: 4px solid var(--secondary-color);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+        }
+        .skill-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        .skill-item h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            font-size: 0.9rem;
+        }
+        .footer-links {
+            margin-bottom: 1rem;
+        }
+        .footer-links a {
+            color: var(--accent-color);
+            text-decoration: none;
+            margin: 0 1rem;
+            transition: color 0.3s;
+        }
+        .footer-links a:hover {
+            color: white;
+        }
+
+        /* Modal Styles (NEW) */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 600px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            cursor: pointer;
+            color: var(--primary-color);
+        }
+
+        .loading-spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid var(--secondary-color);
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 1rem auto;
+            display: none;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .hero-title {
+                font-size: 4.5rem;
+            }
+            .about .container {
+                flex-direction: row;
+                text-align: left;
+            }
+            .about-content {
+                text-align: left;
+            }
+            .section-title {
+                text-align: left;
+                margin-left: 0;
+            }
+        }
+        
+        /* Mobile Navigation adjustment */
+        @media (max-width: 767px) {
+            .nav-links {
+                display: none; /* Hide for true mobile nav implementation */
+            }
+            .hero {
+                padding: 4rem 0;
+            }
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            .stats {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#home" class="logo">Mpho Mtlomelo</a>
+            <div class="nav-links">
+                <a href="#about">About Me</a>
+                <a href="#achievements">Results</a>
+                <a href="#vision">Future Vision</a>
+                <a href="#project">Women in AI</a>
+                <a href="#expertise">Expertise</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <!-- In a real deployment, a hamburger menu icon would go here -->
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1 class="hero-title">Visionary Leadership in AI.</h1>
+            <p class="hero-subtitle">President, Women in AI Global Networks (AI Global Networks)</p>
+            <p class="text-xl max-w-3xl mx-auto mt-4" style="color: var(--text-color);">
+                Driving strategic growth and fostering an inclusive future for women in the technology sector.
+            </p>
+            <div class="cta-group">
+                <a href="#vision" class="cta-button">View Future Roadmap</a>
+                <button class="cta-button summary-button" onclick="handleGenerateSummary()">
+                    ✨ Generate Executive Summary
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <!-- Profile Picture Placeholder using SVG for a clean, placeholder look -->
+            <div class="profile-pic" aria-label="Mpho Mtlomelo Profile Picture Placeholder">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg" style="background-color: var(--secondary-color);">
+                    <circle cx="50" cy="50" r="45" fill="var(--secondary-color)" />
+                    <circle cx="50" cy="35" r="15" fill="#f7fafc" />
+                    <path d="M 25 80 C 25 55 75 55 75 80 Z" fill="#f7fafc" />
+                </svg>
+            </div>
+            
+            <div class="about-content">
+                <h2 class="section-title">About Mpho Mtlomelo</h2>
+                <p>
+                    I am a dedicated leader and strategic thinker committed to harnessing the power of Artificial Intelligence for business solutions and social impact. As the President of Women in AI at AI Global Networks, I lead initiatives focused on empowerment, professional development, and increasing female representation across the global AI ecosystem.
+                </p>
+                <p>
+                    My expertise lies in translating complex technological visions into actionable strategies that deliver measurable results, ensuring our platforms maintain relevance, visibility, and alignment with AI Global Networks' core standards. I collaborate closely with executive leadership, driving integration and global outreach efforts.
+                </p>
+            </div>
+        </div>
+        
+        <!-- Leadership Philosophy Section -->
+        <div class="container">
+            <div class="leadership-philosophy">
+                <h2>Leadership Vision</h2>
+                <p id="leadership-philosophy-text">
+                    "My philosophy is rooted in **impactful growth and intentional inclusion**. In a field as dynamic as AI, true leadership means not just setting high-level strategy, but actively building the diverse talent pipeline necessary to ensure our solutions are innovative, ethical, and representative of the global community we serve. Driving the Women in AI project is a direct realization of this commitment."
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Achievements Section -->
+    <section id="achievements" class="achievements" style="background-color: var(--light-bg);">
+        <div class="container">
+            <h2 class="section-title">Key Achievements & Impact</h2>
+            <div class="achievements-grid">
+                <div class="achievement-item">
+                    <h3>Strategic Project Alignment</h3>
+                    <p>Successfully negotiated and secured **40% project ownership** and operational responsibility for the flagship Women in AI project, ensuring long-term strategic influence.</p>
+                </div>
+                <div class="achievement-item">
+                    <h3>Global Expansion & Outreach</h3>
+                    <p>Spearheaded the expansion initiative resulting in the establishment of **20+ new international chapters**, significantly broadening the network's global footprint and diversity.</p>
+                </div>
+                <div class="achievement-item">
+                    <h3>Mentorship & Development</h3>
+                    <p>Oversaw the successful execution of the annual Mentorship Program, achieving **100+ high-quality matches** that yielded a reported **30% increase** in mentees advancing to senior roles.</p>
+                </div>
+                <div class="achievement-item">
+                    <h3>Reporting & Accountability</h3>
+                    <p>Implemented a robust quarterly reporting framework for the project, enhancing transparency and providing the CEO/CTO with **data-driven progress reviews** necessary for executive decision-making.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Future Vision & Roadmap Section -->
+    <section id="vision" class="vision">
+        <div class="container">
+            <h2 class="section-title">Future Vision & Strategic Roadmap</h2>
+            <div class="vision-grid">
+                <div class="roadmap-item">
+                    <h3>Q4 2025 Focus: AI-Powered Platform Launch</h3>
+                    <p>Currently overseeing the development and beta testing of the **Women in AI Career Navigator**, an AI-driven tool designed to match members with tailored skill development pathways and career opportunities based on their current expertise and future goals. This focuses on providing immediate value to members.</p>
+                </div>
+                <div class="roadmap-item">
+                    <h3>2026 Goal: Expansion into High-Growth Markets</h3>
+                    <p>Planning strategic expansion into **APAC and LATAM markets**, targeting the launch of **10 new chapters** in H1 2026. This requires securing new regional partnerships and localizing content to maximize global impact and representation.</p>
+                </div>
+                <div class="roadmap-item">
+                    <h3>Long-Term Goal: Corporate Sponsorship & Sustainability</h3>
+                    <p>Developing a tiered corporate partnership structure aimed at securing **three major, long-term industry sponsorships** by year-end 2026. This will ensure the project's financial sustainability and allow for scaling premium educational programs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Project Section: Women in AI -->
+    <section id="project" class="project">
+        <div class="container">
+            <div class="project-card">
+                <h2>The Women in AI Project</h2>
+                <p class="text-lg text-gray-300 max-w-4xl mx-auto" id="project-summary-text">
+                    This project is the cornerstone of our mission to bridge the gender gap in technology. We provide mentorship, educational resources, and a global network platform for women entering or advancing their careers in AI and machine learning.
+                </p>
+                <div class="stats">
+                    <div class="stat-item">
+                        <div class="stat-number">40%</div>
+                        <div class="stat-label">Project Ownership Stake</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">Mentorship Matches</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">20+</div>
+                        <div class="stat-label">Global Chapters</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertise/Skills Section -->
+    <section id="expertise" class="expertise">
+        <div class="container">
+            <h2 class="section-title">Core Expertise</h2>
+            <div class="expertise-grid">
+                <div class="skill-item">
+                    <h3>Strategic Leadership</h3>
+                    <p>Translating executive vision into high-impact, scalable global initiatives.</p>
+                </div>
+                <div class="skill-item">
+                    <h3>AI Ecosystem Strategy</h3>
+                    <p>Developing strategies for AI integration and community growth within emerging markets.</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Global Networking</h3>
+                    <p>Building and maintaining high-level partnerships and collaborative development units.</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Talent Development</h3>
+                    <p>Overseeing programs focused on professional and skill growth for women in tech.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact Section -->
+    <footer id="contact" class="footer">
+        <div class="container">
+            <p class="mb-4">
+                <strong style="color: white;">Contact & Connect:</strong>
+            </p>
+            <div class="footer-links">
+                <a href="mailto:mpho.mtlomelo@aiglobalnetworks.com">Email Me</a>
+                <!-- Placeholder links -->
+             <a 
+                        href="https://www.linkedin.com/in/mpho-mtlomelo-7355742ba/" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center text-lg font-semibold text-navy-dark hover:text-pink-strong transition duration-300 mb-6"
+                    >
+                        <Linkedin className="w-6 h-6 mr-2 fill-current" />
+                        Connect with Mpho Mtlomelo on LinkedIn
+                    </a>
+              <a 
+                            href="https://aiglobalnetworks.co.za/#about-head" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center text-lg font-semibold text-navy-dark hover:text-pink-strong transition duration-300 justify-center"
+                        >
+                            <ExternalLink className="w-6 h-6 mr-2 fill-current" />
+                            Visit AI Global Networks
+                        </a>
+            </div>
+            <p class="mt-4">
+                &copy; 2024 Mpho Mtlomelo. Powered by AI Global Networks.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Executive Summary Modal (NEW) -->
+    <div id="summaryModalOverlay" class="modal-overlay">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeSummaryModal()">&times;</span>
+            <h2 style="text-align: center; color: var(--secondary-color);">Executive Summary</h2>
+            <div id="loadingSpinner" class="loading-spinner"></div>
+            <div id="summaryResult">
+                <p id="summaryText" style="font-size: 1.1rem; line-height: 1.8; color: var(--text-color); font-weight: 500;">
+                    <!-- Summary content will be injected here -->
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        /**
+         * Utility function for fetch with exponential backoff for handling API rate limits.
+         */
+        const exponentialBackoffFetch = async (url, options, maxRetries = 5) => {
+            for (let i = 0; i < maxRetries; i++) {
+                try {
+                    const response = await fetch(url, options);
+                    if (!response.ok) {
+                        if (response.status === 429 && i < maxRetries - 1) {
+                            const delay = Math.pow(2, i) * 1000 + Math.random() * 1000;
+                            await new Promise(resolve => setTimeout(resolve, delay));
+                            continue;
+                        }
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+                    return response;
+                } catch (error) {
+                    console.error("Fetch attempt failed:", error);
+                    if (i === maxRetries - 1) throw error;
+                    const delay = Math.pow(2, i) * 1000 + Math.random() * 1000;
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                }
+            }
+        };
+
+        /**
+         * Scrapes the most critical, high-level text content from the portfolio sections.
+         * @returns {string} The concatenated text for the LLM prompt.
+         */
+        function getPortfolioText() {
+            // Scrape main narrative sections
+            const aboutContent = document.querySelector('#about .about-content p').innerText.trim();
+            const leadershipVision = document.getElementById('leadership-philosophy-text').innerText.trim();
+            const projectSummary = document.getElementById('project-summary-text').innerText.trim();
+            
+            let achievementsText = "Key Achievements:\n";
+            document.querySelectorAll('#achievements .achievement-item p').forEach(p => {
+                achievementsText += `- ${p.innerText.trim()}\n`;
+            });
+
+            let visionText = "\nFuture Vision & Roadmap:\n";
+            document.querySelectorAll('#vision .roadmap-item p').forEach(p => {
+                visionText += `- ${p.innerText.trim()}\n`;
+            });
+
+            const fullText = `
+                ROLE: President, Women in AI Global Networks
+                
+                ${aboutContent}
+                
+                ${leadershipVision}
+                
+                ${projectSummary}
+                
+                ${achievementsText}
+                
+                ${visionText}
+            `;
+            return fullText.trim();
+        }
+
+        /**
+         * Calls the Gemini API to generate a concise executive summary.
+         */
+        async function generateSummary() {
+            const portfolioText = getPortfolioText();
+            const summaryResultElement = document.getElementById('summaryResult');
+            const summaryTextElement = document.getElementById('summaryText');
+            const spinner = document.getElementById('loadingSpinner');
+
+            summaryTextElement.innerText = '';
+            spinner.style.display = 'block';
+
+            const systemPrompt = "Act as a highly strategic Chief of Staff preparing a concise briefing for the CEO. Analyze the provided portfolio text for the President of Women in AI Global Networks. Your response MUST be a single paragraph of exactly three strong, executive-level sentences. The summary must cover: 1) The role's strategic focus, 2) Key quantifiable impact/achievements, and 3) The immediate future vision/roadmap.";
+            
+            const userQuery = `Generate the three-sentence executive summary based on the following portfolio content:\n\n---\n${portfolioText}`;
+            
+            const apiKey = "" // If you want to use models other than gemini-2.5-flash-preview-05-20, provide an API key here. Otherwise, leave this as-is.
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+
+            const payload = {
+                contents: [{ parts: [{ text: userQuery }] }],
+                systemInstruction: { parts: [{ text: systemPrompt }] },
+            };
+
+            try {
+                const response = await exponentialBackoffFetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const result = await response.json();
+                const text = result.candidates?.[0]?.content?.parts?.[0]?.text || "Error: Could not generate summary. Please try again.";
+
+                summaryTextElement.innerHTML = text.replace(/\n/g, '<br>'); // Preserve paragraphs/lines
+                
+            } catch (error) {
+                console.error("Gemini API call failed:", error);
+                summaryTextElement.innerText = "Failed to connect to the AI service. Please check your network or try again.";
+            } finally {
+                spinner.style.display = 'none';
+            }
+        }
+
+        /**
+         * Handles button click, shows modal, and calls the API.
+         */
+        function handleGenerateSummary() {
+            document.getElementById('summaryModalOverlay').style.display = 'flex';
+            generateSummary();
+        }
+
+        /**
+         * Closes the summary modal.
+         */
+        function closeSummaryModal() {
+            document.getElementById('summaryModalOverlay').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
